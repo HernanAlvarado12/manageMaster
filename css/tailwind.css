@@ -524,6 +524,11 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .h-full {
   height: 100%;
 }
@@ -534,6 +539,10 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 .bg-black {
