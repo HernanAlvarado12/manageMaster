@@ -430,6 +430,16 @@ html {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 10rem;
+  border-radius: 1rem;
+  background-color: hsl(12, 88%, 59%);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -529,28 +539,109 @@ html {
   margin-right: auto;
 }
 
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-10 {
+  margin-bottom: 10rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
 .flex {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
+.grid {
+  display: grid;
 }
 
-.h-screen {
-  height: 100vh;
+.h-3 {
+  height: 3rem;
+}
+
+.h-4 {
+  height: 4rem;
+}
+
+.h-5 {
+  height: 5rem;
 }
 
 .h-8 {
   height: 8rem;
 }
 
-.w-full {
-  width: 100%;
+.w-5 {
+  width: 5rem;
+}
+
+.w-6 {
+  width: 6rem;
 }
 
 .w-90 {
   width: 90%;
+}
+
+.w-\[15rem\] {
+  width: 15rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.basis-\[100\%\] {
+  flex-basis: 100%;
+}
+
+.scroll-my-4 {
+  scroll-margin-top: 4rem;
+  scroll-margin-bottom: 4rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
 }
 
 .items-center {
@@ -561,7 +652,97 @@ html {
   justify-content: space-between;
 }
 
-.bg-black {
+.gap-x-2 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-y-2 {
+  row-gap: 2rem;
+}
+
+.gap-y-4 {
+  row-gap: 4rem;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-red {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: hsl(12 88% 59% / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: 3.2rem;
+}
+
+.text-md {
+  font-size: 1.8rem;
+}
+
+.text-sm {
+  font-size: 1.6rem;
+}
+
+.text-xl {
+  font-size: 4.2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: hsl(228 39% 23% / var(--tw-text-opacity));
+}
+
+.text-blue-100 {
+  --tw-text-opacity: 1;
+  color: hsl(227 12% 61% / var(--tw-text-opacity));
+}
+
+.text-red {
+  --tw-text-opacity: 1;
+  color: hsl(12 88% 59% / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-sm {
+  --tw-shadow: 0 0.5rem 1rem -0.2rem hsl(13, 100%, 66%);
+  --tw-shadow-colored: 0 0.5rem 1rem -0.2rem var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
