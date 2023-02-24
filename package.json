@@ -1,0 +1,29 @@
+{
+  "name": "managemastertailwind",
+  "version": "1.0.0",
+  "description": "project for practice my abilities in frontend",
+  "main": "model.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/mobile.css -o ./css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HernanAlvarado12/manageMaster.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "tailwindcss",
+    "vanillajs"
+  ],
+  "type": "module",
+  "author": "Hernan Alvarado <hernanvid123@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HernanAlvarado12/manageMaster/issues"
+  },
+  "homepage": "https://github.com/HernanAlvarado12/manageMaster#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
