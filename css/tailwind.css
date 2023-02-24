@@ -529,6 +529,10 @@ html {
   margin-right: auto;
 }
 
+.flex {
+  display: flex;
+}
+
 .h-full {
   height: 100%;
 }
@@ -537,12 +541,24 @@ html {
   height: 100vh;
 }
 
+.h-8 {
+  height: 8rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-90 {
   width: 90%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .bg-black {
