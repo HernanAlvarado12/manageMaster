@@ -26,8 +26,8 @@
         <header>
             <nav>
                 <figure class ="w-90 h-8 mx-auto flex items-center justify-between">
-                    <img src ="./assets/logo.svg" alt ="icon logo">
-                    <img src ="./assets/hamburger.svg" alt ="icon menu">
+                    <img src ="./assets/logo.svg" alt ="icon logo" loading ="lazy" draggable ="false">
+                    <img src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
                 </figure>
             </nav>
         </header>
@@ -65,7 +65,7 @@
                 <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden snap-x snap-proximity scroll-x">
                     <template id ="saidTemplate">
                         <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start">
-                            <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture">
+                            <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture" loading ="lazy" draggable ="false">
                             <h3 class ="text-blue text-md font-bold"></h3>
                             <p></p>
                         </article>
@@ -79,15 +79,45 @@
                 </section>
                 <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
             </section>
-            <div class ="w-full grid place-content-center text-center relative aspect-video bg-red">
+            <div class ="w-full min-h-[37rem] grid place-content-center text-center relative aspect-video bg-red">
                 <h3 class ="text-white text-lg font-bold">Simplify how your team works today.</h3>
                 <button class ="w-[15rem] h-4 mx-auto mt-2 text-red text-sm font-bold rounded-full bg-white">Get Started</button>
                 <picture>
                     <source media ="(min-width: 900px)" srcset ="./assets/simplify-desktop.svg">
-                    <img class ="h-80 block absolute top-[10%] left-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify">
+                    <img class ="h-80 block absolute top-[10%] left-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify" loading ="lazy" draggable ="false">
                 </picture>
             </div>
         </main>
+
+        <footer class ="bg-blue-200">
+            <section class ="w-90 mx-auto py-4 flex items-center flex-col gap-y-5 text-blue-100">
+                <form class ="w-full flex gap-x-1">
+                    <input class ="basis-[70%] h-4 text-xs indent-2 outline-none caret-red rounded-full placeholder:text-blue-100" type ="text" placeholder ="Updates in your inbox..."> 
+                    <input class ="basis-[30%] h-4 text-white text-sm rounded-full bg-red" type ="submit">
+                </form>
+                <section class ="grid grid-cols-2 gap-x-3">
+                    <ul class ="flex flex-col gap-y-1 text-md">
+                        <li><a class ="" href ="#">Home</a></li>
+                        <li><a class ="" href ="#">Pricing</a></li>
+                        <li><a class ="" href ="#">Products</a></li>
+                        <li><a class ="" href ="#">About Us</a></li>
+                    </ul>
+                    <ul class ="flex flex-col gap-y-1 text-md">
+                        <li><a class ="" href ="#">Careers</a></li>
+                        <li><a class ="" href ="#">Community</a></li>
+                        <li><a class ="" href ="#">Privacy Policy</a></li>
+                    </ul>
+                </section>
+                <figure class ="flex items-center justify-center gap-x-3">
+                    <img class ="w-3" src ="./assets/facebook.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/youtube.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/twitter.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/pinterest.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/instagram.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                </figure>
+                <p class ="text-xs">Copyright 2020. All Rights Reserved</p>
+            </section>
+        </footer>
 
         <script src ="./model.js" type ="module"></script>
     </body>
