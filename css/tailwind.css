@@ -533,20 +533,8 @@ html {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .h-8 {
   height: 8rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-90 {
@@ -559,9 +547,4 @@ html {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
