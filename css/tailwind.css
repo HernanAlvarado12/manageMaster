@@ -440,6 +440,16 @@ body::-webkit-scrollbar-thumb {
   background-color: hsl(12, 88%, 59%);
 }
 
+.scroll-x::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(12, 88%, 59%);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -534,6 +544,22 @@ body::-webkit-scrollbar-thumb {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-\[10\%\] {
+  top: 10%;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -575,12 +601,24 @@ body::-webkit-scrollbar-thumb {
   margin-top: 6rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.h-1 {
+  height: 1rem;
 }
 
 .h-3 {
@@ -597,6 +635,14 @@ body::-webkit-scrollbar-thumb {
 
 .h-8 {
   height: 8rem;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.w-1 {
+  width: 1rem;
 }
 
 .w-5 {
@@ -623,17 +669,20 @@ body::-webkit-scrollbar-thumb {
   flex-shrink: 0;
 }
 
-.grow-0 {
-  flex-grow: 0;
-}
-
 .basis-\[100\%\] {
   flex-basis: 100%;
 }
 
-.scroll-my-4 {
-  scroll-margin-top: 4rem;
-  scroll-margin-bottom: 4rem;
+.snap-x {
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-proximity {
+  --tw-scroll-snap-strictness: proximity;
+}
+
+.snap-start {
+  scroll-snap-align: start;
 }
 
 .flex-col {
@@ -652,6 +701,16 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
 }
 
+.gap-x-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+}
+
+.gap-x-0\.5 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-2 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -665,12 +724,25 @@ body::-webkit-scrollbar-thumb {
   row-gap: 4rem;
 }
 
-.overflow-x-scroll {
-  overflow-x: scroll;
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(12 88% 59% / var(--tw-border-opacity));
 }
 
 .bg-red {
@@ -683,14 +755,13 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.px-2 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+.p-2 {
+  padding: 2rem;
 }
 
-.py-6 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .text-center {
