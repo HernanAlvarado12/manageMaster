@@ -1095,11 +1095,6 @@ body::-webkit-scrollbar-thumb {
          column-gap: 0.5rem;
   }
 
-  .base\:gap-x-3 {
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
-  }
-
   .base\:p-0 {
     padding: 0px;
   }
