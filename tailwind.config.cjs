@@ -7,7 +7,7 @@ module.exports = {
         'sm': '900px'
       },
       spacing: {
-        '0.5': '0.3rem',
+        '0.5': '0.5rem',
         '1': '1rem',
         '1.5': '1.5rem',
         '2': '2rem',
@@ -18,6 +18,7 @@ module.exports = {
         '8': '8rem',
         '10': '10rem',
         '50': '50%',
+        '80': '80%',
         '85': '85%',
         '90': '90%'
       },
@@ -46,8 +47,13 @@ module.exports = {
           '100': 'hsl(227, 12%, 61%)',
           '200': 'hsl(233, 12%, 13%)'
         }
+      },
+      boxShadow: {
+        'sm': '0 0.5rem 1rem -0.2rem hsl(13, 100%, 66%)'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }
