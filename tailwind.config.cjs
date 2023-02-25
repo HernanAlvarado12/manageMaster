@@ -3,6 +3,9 @@ module.exports = {
   content: ['./*.{html,js}'],
   theme: {
     extend: {
+      screens: {
+        base: '900px'
+      },
       spacing: {
         '0.5': '0.5rem',
         '1': '1rem',
