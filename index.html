@@ -25,11 +25,11 @@
         
         <header>
             <nav>
-                <figure class ="w-90 h-8 mx-auto flex items-center justify-between">
+                <figure class ="w-90 h-8 mx-auto flex items-center justify-between base:relative">
                     <img src ="./assets/logo.svg" alt ="icon logo" loading ="lazy" draggable ="false">
-                    <img class ="cursor-pointer" id ="iconMenu" src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
-                    <menu class ="w-90 hidden absolute top-8 shadow-menu rounded-sm bg-white">
-                        <ul class ="py-3 flex items-center flex-col gap-y-2 text-blue-200 text-sm font-bold">
+                    <img class ="cursor-pointer base:hidden" id ="iconMenu" src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
+                    <menu class ="w-90 hidden absolute top-8 shadow-menu rounded-sm bg-white base:w-auto base:block base:relative base:top-0 base:shadow-none">
+                        <ul class ="py-3 flex items-center flex-col gap-y-2 text-blue-200 text-sm font-bold base:p-0 base:flex-row base:gap-x-4  base:font-medium">
                             <li><a href ="#">Pricing</a></li>
                             <li><a href ="#">Product</a></li>
                             <li><a href ="#">About Us</a></li>
@@ -37,63 +37,68 @@
                             <li><a href ="#">Community</a></li>
                         </ul>
                     </menu>
+                    <button class ="w-[15rem] h-4 hidden text-white text-sm font-bold rounded-full shadow-sm bg-red lg:block">Get Started</button>
                 </figure>
             </nav>
         </header>
 
-        <main class ="text-sm text-blue-100 font-light overflow-hidden">
-            <img class ="mx-auto" src ="./assets/intro.svg" alt ="picture intro">
-            <article class ="w-90 mx-auto flex items-center flex-col gap-y-2 text-center">
-                <h1 class ="text-blue text-xl font-bold">Bring everyone together to build better products.</h1>
-                <p>
-                    Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger 
-                    team goals in view.
-                </p>
-                <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
-            </article>
-            <article class ="w-90 mx-auto mt-10 mb-6 text-center">
-                <h2 class ="text-blue text-lg font-bold">What’s different about Manage?</h2>
-                <p class ="mt-4 mb-8">
-                    Manage provides all the functionality your team needs, without the complexity. Our software
-                    is tailor-made for modern digital product teams.
-                </p>
-            </article>
-            <section class ="w-90 mx-auto flex items-center flex-col gap-y-4">
-                <template id ="manageTemplate">
-                    <article>
-                        <div class ="mb-1 flex items-center gap-x-2">
-                            <span class ="w-6 h-3 grid place-content-center text-white rounded-full bg-red"></span>
-                            <p class ="text-blue text-sm font-bold"></p>
-                        </div>
-                        <p class ="text-justify"></p>
-                    </article>
-                </template>
+        <main class ="text-sm text-blue-100 font-light overflow-hidden base:mt-8">
+            <div class ="w-90 mx-auto base:w-85 base:grid base:grid-cols-2">
+                <img class ="mx-auto base:order-1" src ="./assets/intro.svg" alt ="picture intro">
+                <article class ="flex items-center flex-col gap-y-2 text-center base:w-85 base:items-start base:text-start">
+                    <h1 class ="text-blue text-xl font-bold">Bring everyone together to build better products.</h1>
+                    <p>
+                        Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger 
+                        team goals in view.
+                    </p>
+                    <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
+                </article>
+            </div>
+            <section class ="w-90 mx-auto base:w-85 base:mt-10 base:grid base:grid-cols-2 base:gap-x-4">
+                <article class ="w-full mt-10 mb-6 text-center base:m-0 base:text-start">
+                    <h2 class ="text-blue text-lg font-bold">What’s different about Manage?</h2>
+                    <p class ="mt-4 mb-8">
+                        Manage provides all the functionality your team needs, without the complexity. Our software
+                        is tailor-made for modern digital product teams.
+                    </p>
+                </article>
+                <section class ="w-full flex items-center flex-col gap-y-4">
+                    <template id ="manageTemplate">
+                        <article>
+                            <div class ="mb-1 flex items-center gap-x-2">
+                                <span class ="w-6 h-3 grid place-content-center text-white rounded-full bg-red"></span>
+                                <p class ="text-blue text-sm font-bold"></p>
+                            </div>
+                            <p class ="text-justify base:ml-8"></p>
+                        </article>
+                    </template>
+                </section>
             </section>
-            <section class ="w-90 mx-auto mt-6 mb-10 flex items-center flex-col">
+            <section class ="w-90 mx-auto mt-6 mb-10 flex items-center flex-col base:mt-10">
                 <h2 class ="text-blue text-lg font-bold text-center">What they've said</h2>
-                <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden snap-x snap-proximity scroll-x">
+                <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden base:mt-2">
                     <template id ="saidTemplate">
-                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start sm:basis-[50%]">
+                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center sm:basis-[50%] base:basis-[31%] lg:basis-[23%]">
                             <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture" loading ="lazy" draggable ="false">
                             <h3 class ="text-blue text-md font-bold"></h3>
                             <p class ="sm:line-clamp-5 md:line-clamp-4"></p>
                         </article>
                     </template>
                 </section>
-                <section class ="mb-4 flex gap-x-0.5">
+                <div class ="mb-4 flex gap-x-0.5 sm:hidden">
                     <span class ="w-1 h-1 border border-red rounded-full"></span>
                     <span class ="w-1 h-1 border border-red rounded-full"></span>
                     <span class ="w-1 h-1 border border-red rounded-full"></span>
                     <span class ="w-1 h-1 border border-red rounded-full"></span>
-                </section>
+                </div>
                 <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
             </section>
-            <div class ="w-full min-h-[37rem] grid place-content-center text-center relative aspect-video bg-red">
+            <div class ="w-full min-h-[37rem] grid place-content-center text-center relative aspect-video bg-red base:h-[30rem] base:min-h-0">
                 <h3 class ="max-w-[40rem] text-white text-lg font-bold">Simplify how your team works today.</h3>
                 <button class ="w-[15rem] h-4 mx-auto mt-2 text-red text-sm font-bold rounded-full bg-white">Get Started</button>
                 <picture>
                     <source media ="(min-width: 900px)" srcset ="./assets/simplify-desktop.svg">
-                    <img class ="h-80 block absolute top-[10%] left-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify" loading ="lazy" draggable ="false">
+                    <img class ="h-80 block absolute top-[10%] left-0 base:h-full base:top-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify" loading ="lazy" draggable ="false">
                 </picture>
             </div>
         </main>

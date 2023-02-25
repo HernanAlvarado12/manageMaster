@@ -31,7 +31,7 @@ manage.forEach((manage, index) => {
         console.error(error)
     }
 })
-document.querySelector('main > article + section.w-90').append(manageFragment)
+document.querySelector('main > section section').append(manageFragment)
 
 
 sayd.forEach(said => {
@@ -45,5 +45,5 @@ sayd.forEach(said => {
         console.log(error)
     }
 })
-document.querySelector('main > section.w-90 + section > section').append(saidFrament)
+document.querySelector('main > section.flex section').append(saidFrament)
 
