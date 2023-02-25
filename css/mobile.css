@@ -13,4 +13,25 @@
         font-size: 62.5%;
         font-family: 'Be Vietnam Pro', sans-serif;
     }
+
+    body::-webkit-scrollbar {
+        width: 0.7rem;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        height: 10rem;
+        border-radius: 1rem;
+        background-color: hsl(12, 88%, 59%);
+    }
+
+    .scroll-x::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    .scroll-x::-webkit-scrollbar-thumb {
+        margin-top: 1rem;
+        border-radius: 1rem;
+        background-color: hsl(12, 88%, 59%);
+    }
+
 }

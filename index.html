@@ -26,13 +26,109 @@
         <header>
             <nav>
                 <figure class ="w-90 h-8 mx-auto flex items-center justify-between">
-                    <img src ="./assets/logo.svg" alt ="icon logo">
-                    <img src ="./assets/hamburger.svg" alt ="icon menu">
+                    <img src ="./assets/logo.svg" alt ="icon logo" loading ="lazy" draggable ="false">
+                    <img class ="cursor-pointer" id ="iconMenu" src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
+                    <menu class ="w-90 hidden absolute top-8 shadow-menu rounded-sm bg-white">
+                        <ul class ="py-3 flex items-center flex-col gap-y-2 text-blue-200 text-sm font-bold">
+                            <li><a href ="#">Pricing</a></li>
+                            <li><a href ="#">Product</a></li>
+                            <li><a href ="#">About Us</a></li>
+                            <li><a href ="#">Careers</a></li>
+                            <li><a href ="#">Community</a></li>
+                        </ul>
+                    </menu>
                 </figure>
             </nav>
         </header>
 
+        <main class ="text-sm text-blue-100 font-light overflow-hidden">
+            <img class ="mx-auto" src ="./assets/intro.svg" alt ="picture intro">
+            <article class ="w-90 mx-auto flex items-center flex-col gap-y-2 text-center">
+                <h1 class ="text-blue text-xl font-bold">Bring everyone together to build better products.</h1>
+                <p>
+                    Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger 
+                    team goals in view.
+                </p>
+                <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
+            </article>
+            <article class ="w-90 mx-auto mt-10 mb-6 text-center">
+                <h2 class ="text-blue text-lg font-bold">What’s different about Manage?</h2>
+                <p class ="mt-4 mb-8">
+                    Manage provides all the functionality your team needs, without the complexity. Our software
+                    is tailor-made for modern digital product teams.
+                </p>
+            </article>
+            <section class ="w-90 mx-auto flex items-center flex-col gap-y-4">
+                <template id ="manageTemplate">
+                    <article>
+                        <div class ="mb-1 flex items-center gap-x-2">
+                            <span class ="w-6 h-3 grid place-content-center text-white rounded-full bg-red"></span>
+                            <p class ="text-blue text-sm font-bold"></p>
+                        </div>
+                        <p class ="text-justify"></p>
+                    </article>
+                </template>
+            </section>
+            <section class ="w-90 mx-auto mt-6 mb-10 flex items-center flex-col">
+                <h2 class ="text-blue text-lg font-bold text-center">What they've said</h2>
+                <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden snap-x snap-proximity scroll-x">
+                    <template id ="saidTemplate">
+                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start sm:basis-[50%]">
+                            <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture" loading ="lazy" draggable ="false">
+                            <h3 class ="text-blue text-md font-bold"></h3>
+                            <p class ="sm:line-clamp-5 md:line-clamp-4"></p>
+                        </article>
+                    </template>
+                </section>
+                <section class ="mb-4 flex gap-x-0.5">
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                </section>
+                <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
+            </section>
+            <div class ="w-full min-h-[37rem] grid place-content-center text-center relative aspect-video bg-red">
+                <h3 class ="max-w-[40rem] text-white text-lg font-bold">Simplify how your team works today.</h3>
+                <button class ="w-[15rem] h-4 mx-auto mt-2 text-red text-sm font-bold rounded-full bg-white">Get Started</button>
+                <picture>
+                    <source media ="(min-width: 900px)" srcset ="./assets/simplify-desktop.svg">
+                    <img class ="h-80 block absolute top-[10%] left-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify" loading ="lazy" draggable ="false">
+                </picture>
+            </div>
+        </main>
 
+        <footer class ="bg-blue-200">
+            <section class ="w-90 mx-auto py-4 flex items-center flex-col gap-y-5 text-blue-100">
+                <form class ="w-full max-w-[50rem] flex gap-x-1">
+                    <input class ="basis-[70%] h-4 text-xs indent-2 outline-none caret-red rounded-full placeholder:text-blue-100" type ="text" placeholder ="Updates in your inbox..."> 
+                    <input class ="basis-[30%] h-4 text-white text-sm rounded-full bg-red" type ="submit">
+                </form>
+                <section class ="w-full grid grid-cols-2 justify-items-center gap-x-3">
+                    <ul class ="flex flex-col gap-y-1 text-md">
+                        <li><a class ="" href ="#">Home</a></li>
+                        <li><a class ="" href ="#">Pricing</a></li>
+                        <li><a class ="" href ="#">Products</a></li>
+                        <li><a class ="" href ="#">About Us</a></li>
+                    </ul>
+                    <ul class ="flex flex-col gap-y-1 text-md">
+                        <li><a class ="" href ="#">Careers</a></li>
+                        <li><a class ="" href ="#">Community</a></li>
+                        <li><a class ="" href ="#">Privacy Policy</a></li>
+                    </ul>
+                </section>
+                <figure class ="flex items-center justify-center gap-x-3 sm:gap-x-4">
+                    <img class ="w-3" src ="./assets/facebook.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/youtube.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/twitter.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/pinterest.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                    <img class ="w-3" src ="./assets/instagram.svg" alt ="icon company" loading ="lazy" draggable ="false">
+                </figure>
+                <p class ="text-xs">Copyright 2020. All Rights Reserved</p>
+            </section>
+        </footer>
+
+        <script src ="./model.js" type ="module"></script>
     </body>
 
 </html>
