@@ -24,4 +24,14 @@
         background-color: hsl(12, 88%, 59%);
     }
 
+    .scroll-x::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    .scroll-x::-webkit-scrollbar-thumb {
+        margin-top: 1rem;
+        border-radius: 1rem;
+        background-color: hsl(12, 88%, 59%);
+    }
+
 }

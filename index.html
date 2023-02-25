@@ -32,7 +32,7 @@
             </nav>
         </header>
 
-        <main class ="text-sm text-blue-100 font-light">
+        <main class ="text-sm text-blue-100 font-light overflow-hidden">
             <img src ="./assets/intro.svg" alt ="picture intro">
             <article class ="w-90 mx-auto flex items-center flex-col gap-y-2 text-center">
                 <h1 class ="text-blue text-xl font-bold">Bring everyone together to build better products.</h1>
@@ -61,21 +61,31 @@
                 </template>
             </section>
             <section class ="w-90 mx-auto mt-6 mb-10 flex items-center flex-col">
-                <h2 class ="text-blue text-lg font-bold">What they've said</h2>
-                <section class ="w-full mt-6 mb-4 flex items-center overflow-x-scroll scroll-my-4">
+                <h2 class ="text-blue text-lg font-bold text-center">What they've said</h2>
+                <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden snap-x snap-proximity scroll-x">
                     <template id ="saidTemplate">
-                        <article class ="grow-0 shrink-0 basis-[100%] flex items-center flex-col gap-y-2 text-center">
+                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start">
                             <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture">
                             <h3 class ="text-blue text-md font-bold"></h3>
                             <p></p>
                         </article>
                     </template>
                 </section>
+                <section class ="mb-4 flex gap-x-0.5">
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                    <span class ="w-1 h-1 border border-red rounded-full"></span>
+                </section>
                 <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
             </section>
-            <div class ="w-full py-6 px-2 text-center bg-red">
+            <div class ="w-full grid place-content-center text-center relative aspect-video bg-red">
                 <h3 class ="text-white text-lg font-bold">Simplify how your team works today.</h3>
                 <button class ="w-[15rem] h-4 mx-auto mt-2 text-red text-sm font-bold rounded-full bg-white">Get Started</button>
+                <picture>
+                    <source media ="(min-width: 900px)" srcset ="./assets/simplify-desktop.svg">
+                    <img class ="h-80 block absolute top-[10%] left-0" src ="./assets/simplify-mobile.svg" alt ="picture simplify">
+                </picture>
             </div>
         </main>
 
