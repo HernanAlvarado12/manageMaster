@@ -19,6 +19,11 @@ document.addEventListener('click', event => {
     }
 })
 
+matchMedia('(max-width: 899px)').addEventListener('change', () => {
+    document.querySelector('menu').classList.add('hidden')
+    document.getElementById('iconMenu').setAttribute('src', './assets/hamburger.svg')
+})
+
 
 manage.forEach((manage, index) => {
     try {
