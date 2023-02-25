@@ -1,15 +1,24 @@
 'use strict'
 import { manage, sayd } from './data.js'
-/**
- * @type {Element}
- */
-const manageTemplate = document.getElementById('manageTemplate').content 
-const manageFragment = document.createDocumentFragment()
-/**
- * @type {Element}
- */
-const saidTemplate = document.getElementById('saidTemplate').content
+
 const saidFrament = document.createDocumentFragment()
+const manageFragment = document.createDocumentFragment()
+const saidTemplate = document.getElementById('saidTemplate').content
+const manageTemplate = document.getElementById('manageTemplate').content 
+
+
+document.addEventListener('click', event => {
+    /**
+     * @type {Element}
+     */
+    const target = event.target
+    if(target.matches('#iconMenu')) {
+        const menu = document.querySelector('menu')
+        menu.classList.toggle('hidden')
+        target.setAttribute('src', menu.classList.contains('hidden')? './assets/hamburger.svg' : './assets/close.svg')
+    }
+})
+
 
 manage.forEach((manage, index) => {
     try {
@@ -37,3 +46,4 @@ sayd.forEach(said => {
     }
 })
 document.querySelector('main > section.w-90 + section > section').append(saidFrament)
+

@@ -27,7 +27,16 @@
             <nav>
                 <figure class ="w-90 h-8 mx-auto flex items-center justify-between">
                     <img src ="./assets/logo.svg" alt ="icon logo" loading ="lazy" draggable ="false">
-                    <img src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
+                    <img class ="cursor-pointer" id ="iconMenu" src ="./assets/hamburger.svg" alt ="icon menu" loading ="lazy" draggable ="false">
+                    <menu class ="w-90 hidden absolute top-8 shadow-menu rounded-sm bg-white">
+                        <ul class ="py-3 flex items-center flex-col gap-y-2 text-blue-200 text-sm font-bold">
+                            <li><a href ="#">Pricing</a></li>
+                            <li><a href ="#">Product</a></li>
+                            <li><a href ="#">About Us</a></li>
+                            <li><a href ="#">Careers</a></li>
+                            <li><a href ="#">Community</a></li>
+                        </ul>
+                    </menu>
                 </figure>
             </nav>
         </header>

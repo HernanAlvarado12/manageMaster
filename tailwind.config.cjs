@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.{html,js}'],
   theme: {
     extend: {
       spacing: {
@@ -46,7 +46,11 @@ module.exports = {
         }
       },
       boxShadow: {
-        'sm': '0 0.5rem 1rem -0.2rem hsl(13, 100%, 66%)'
+        'sm': '0 0.5rem 1rem -0.2rem hsl(13, 100%, 66%)',
+        'menu': '0 0.2rem 1.2rem rgba(0, 0, 0, 0.5)'
+      },
+      backgroundImage: {
+        'menu': 'linear-gradient(gray, white)'
       }
     },
   },
