@@ -817,3 +817,9 @@ body::-webkit-scrollbar-thumb {
   --tw-shadow-colored: 0 0.5rem 1rem -0.2rem var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+@media (min-width: 640px) {
+  .sm\:basis-\[50\%\] {
+    flex-basis: 50%;
+  }
+}
