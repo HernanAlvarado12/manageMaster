@@ -33,7 +33,7 @@
         </header>
 
         <main class ="text-sm text-blue-100 font-light overflow-hidden">
-            <img src ="./assets/intro.svg" alt ="picture intro">
+            <img class ="mx-auto" src ="./assets/intro.svg" alt ="picture intro">
             <article class ="w-90 mx-auto flex items-center flex-col gap-y-2 text-center">
                 <h1 class ="text-blue text-xl font-bold">Bring everyone together to build better products.</h1>
                 <p>
@@ -56,7 +56,7 @@
                             <span class ="w-6 h-3 grid place-content-center text-white rounded-full bg-red"></span>
                             <p class ="text-blue text-sm font-bold"></p>
                         </div>
-                        <p></p>
+                        <p class ="text-justify"></p>
                     </article>
                 </template>
             </section>
@@ -64,10 +64,10 @@
                 <h2 class ="text-blue text-lg font-bold text-center">What they've said</h2>
                 <section class ="w-full mt-6 mb-4 py-2 flex items-center gap-x-2 overflow-x-hidden snap-x snap-proximity scroll-x">
                     <template id ="saidTemplate">
-                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start">
+                        <article class ="p-2 flex items-center flex-col gap-y-2 shrink-0 basis-[100%] text-center snap-start sm:basis-[50%]">
                             <img class ="w-5 h-5" src ="./assets/ali.png" alt ="profile picture" loading ="lazy" draggable ="false">
                             <h3 class ="text-blue text-md font-bold"></h3>
-                            <p></p>
+                            <p class ="sm:line-clamp-5 md:line-clamp-4"></p>
                         </article>
                     </template>
                 </section>
@@ -80,7 +80,7 @@
                 <button class ="w-[15rem] h-4 text-white text-sm font-bold rounded-full shadow-sm bg-red">Get Started</button>
             </section>
             <div class ="w-full min-h-[37rem] grid place-content-center text-center relative aspect-video bg-red">
-                <h3 class ="text-white text-lg font-bold">Simplify how your team works today.</h3>
+                <h3 class ="max-w-[40rem] text-white text-lg font-bold">Simplify how your team works today.</h3>
                 <button class ="w-[15rem] h-4 mx-auto mt-2 text-red text-sm font-bold rounded-full bg-white">Get Started</button>
                 <picture>
                     <source media ="(min-width: 900px)" srcset ="./assets/simplify-desktop.svg">

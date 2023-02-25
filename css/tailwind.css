@@ -673,6 +673,10 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+.max-w-\[40rem\] {
+  max-width: 40rem;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -820,6 +824,10 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .indent-2 {
   text-indent: 2rem;
 }
@@ -895,4 +903,26 @@ body::-webkit-scrollbar-thumb {
 .placeholder\:text-blue-100::placeholder {
   --tw-text-opacity: 1;
   color: hsl(227 12% 61% / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:basis-\[50\%\] {
+    flex-basis: 50%;
+  }
+
+  .sm\:line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
 }
