@@ -1,4 +1,3 @@
-'use strict'
 import { manage, sayd } from './data.js'
 
 const saidFrament = document.createDocumentFragment()
@@ -7,6 +6,7 @@ const saidTemplate = document.getElementById('saidTemplate').content
 const manageTemplate = document.getElementById('manageTemplate').content 
 
 
+let currentIndex = 0
 document.addEventListener('click', event => {
     /**
      * @type {Element}
@@ -16,6 +16,8 @@ document.addEventListener('click', event => {
         const menu = document.querySelector('menu')
         menu.classList.toggle('hidden')
         target.setAttribute('src', menu.classList.contains('hidden')? './assets/hamburger.svg' : './assets/close.svg')
+    }else if(target.matches('section.mt-6.mb-10.flex > div.mb-4 > span')) {
+        moveCommentaries(target)       
     }
 })
 
@@ -23,6 +25,75 @@ matchMedia('(max-width: 899px)').addEventListener('change', () => {
     document.querySelector('menu').classList.add('hidden')
     document.getElementById('iconMenu').setAttribute('src', './assets/hamburger.svg')
 })
+
+
+/**
+ * 
+ * @param {Element} target 
+ */
+const moveCommentaries = (target) => {
+    document.querySelector('span.w-1.h-1.border-active').classList.remove('border-active')
+    target.classList.add('border-active')
+    const commentaries = [...document.querySelectorAll('section.flex.flex-col > section.mt-6.mb-4 article')]
+    const index = [...target.parentElement.children].findIndex(node => node === target)
+    if(index == currentIndex) {
+        return
+    }else if(index > currentIndex) {
+        commentaries.forEach(node => addClassList(node, index))
+    }else {
+        commentaries.forEach(commentary => {
+            const classList = [...commentary.classList].filter(name => name.match('.translate-x-.'))
+            removeClassList(commentary, classList, currentIndex, index)
+        })
+    }
+    currentIndex = index
+}
+
+
+
+/**
+ * 
+ * @param {Element} currentNode 
+ * @param {Array<String>} classList 
+ * @param {Number} currentIndex 
+ * @param {Number} index 
+ */
+const removeClassList = (currentNode, classList,  currentIndex, index) => {
+    for(let i = currentIndex; i > index; i--) {
+        currentNode.classList.remove(classList.pop())
+    }
+}
+
+
+/**
+ * 
+ * @param {Element} currentNode 
+ * @param {Number} index 
+ */
+const addClassList = (currentNode, index) => {
+    for(let i = 0; i < index; i++) {
+        currentNode.classList.add(classList(i +1))
+    }
+}
+
+
+/**
+ * 
+ * @param {Number} index 
+ * @returns {String} classList
+ */
+const classList = (index) => {
+    return ['-translate-x-0', '-translate-x-[105%]', '-translate-x-[210%]', '-translate-x-[315%]'][index]
+}
+
+
+/**
+ * 
+ * @param {Element} target 
+ */
+const findIndex = target => {
+    return [...target.parentElement.children].findIndex(node => node == target)
+}
 
 
 manage.forEach((manage, index) => {
